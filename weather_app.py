@@ -27,5 +27,7 @@ def index():
             error = "Please enter a city name."
     return render_template('index.html', weather=weather_data, error=error)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Removed app.run() for Vercel serverless compatibility
+# The app object is exposed as the WSGI callable for Vercel
+
+# No need to call app.run() in serverless environment
