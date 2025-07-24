@@ -25,7 +25,7 @@ def index():
                 error = "City not found!"
         else:
             error = "Please enter a city name."
-    return render_template('weather.html', weather=weather_data, error=error)
+    return render_template('index.html', weather=weather_data, error=error)
 
 if __name__ == '__main__':
     app.run(debug=True)
